@@ -14,7 +14,11 @@ class MedicamentosList extends StatelessWidget {
         return Card(
           margin: const EdgeInsets.symmetric(vertical: 8),
           child: ListTile(
-            leading: Image.network(item["imagem"], width: 50, fit: BoxFit.cover),
+            leading: Image.asset(item["imagem"]?? '',
+                                width: 50,
+                                height: 50,
+                                fit: BoxFit.cover,
+                                errorBuilder: (context, error, stackTrace) => const Icon(Icons.medical_services, size: 50, color: Colors.grey),),
             title: Text(item["nome"], style: const TextStyle(fontWeight: FontWeight.bold)),
             subtitle: Text(item["horario"]),
             trailing: Text(

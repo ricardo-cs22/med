@@ -30,17 +30,8 @@ class _EstoqueScreenState extends State<EstoqueScreen> {
           ],
         ),
         
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
-          BottomNavigationBarItem(icon: Icon(Icons.medical_services), label: 'Remédios'),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: 'Agenda'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Eu'),
-        ],
-        selectedItemColor: const Color(0xFF5B8DEE),
-        unselectedItemColor: Colors.grey,
-        showUnselectedLabels: true,));
+      ));
+      
       
   }
 }

@@ -22,23 +22,23 @@ class HomeScreen extends StatelessWidget {
           children: [
             HeaderWidget(user: user),
             const SizedBox(height: 16),
+            
+            Padding(
+              padding: const EdgeInsets.only(left: 50),
+              child: Text("Categorias",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+            ),
             CategoryGrid(categorias: categorias),
             const SizedBox(height: 16),
+             Padding(
+              padding: const EdgeInsets.only(left: 50),
+              child: Text("Historico",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+            ),
             HistoryList(medicamentos: medicamentos),
           ],
         ),
         
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
-          BottomNavigationBarItem(icon: Icon(Icons.medical_services), label: 'Remédios'),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: 'Agenda'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Eu'),
-        ],
-        selectedItemColor: const Color(0xFF5B8DEE),
-        unselectedItemColor: Colors.grey,
-        showUnselectedLabels: true,));
+    );
       
   }
 }

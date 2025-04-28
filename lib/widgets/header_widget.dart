@@ -8,7 +8,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+      padding: const EdgeInsets.only(top: 29, left: 16,right: 16,bottom: 16),
       decoration: const BoxDecoration(
         color: Color(0xFF5B8DEE),
         borderRadius: BorderRadius.only(
@@ -26,7 +26,7 @@ class HeaderWidget extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 30,
-                    backgroundImage: NetworkImage(user["fotoPerfil"]),
+                    backgroundImage: AssetImage(user["fotoPerfil"]),
                   ),
                   const SizedBox(width: 12),
                   Column(
@@ -48,8 +48,8 @@ class HeaderWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Image.network(
-                'https://via.placeholder.com/100x50',
+              Image.asset(
+                'assets/logo.png',
                 width: 100,
               ),
             ],
