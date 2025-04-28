@@ -1,0 +1,1 @@
+ C:\\Users\\ric\\Documents\\MedTimer\\medtimer\\.dart_tool\\flutter_build\\44b74682b0d6fb1fa9418f76e7a92435\\native_assets.json: 

@@ -14,13 +14,15 @@ class EstoqueList extends StatelessWidget {
           return Card(
             margin: const EdgeInsets.symmetric(vertical: 8),
             child: ListTile(
-              leading: Image.network(med["imagem"], width: 50, fit: BoxFit.cover),
+              leading: Image.asset(med["imagem"]?? '',
+                                width: 50,
+                                height: 50,
+                                fit: BoxFit.cover,
+                                errorBuilder: (context, error, stackTrace) => const Icon(Icons.medical_services, size: 50, color: Colors.grey),),
               title: Text(med["nome"], style: const TextStyle(fontWeight: FontWeight.bold)),
-              subtitle: Text(med["estoque"]),
-              trailing: Text(
-                med["status"],
-                style: TextStyle(color: _getStatusColor(med["corStatus"]), fontWeight: FontWeight.bold),
-              ),
+              subtitle: Text("quantidade em estoque"+med["estoque"]),
+              
+              
             ),
           );
         }).toList(),

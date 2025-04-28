@@ -12,9 +12,7 @@ class HistoricoScreen extends StatefulWidget {
 }
 
 class _HistoricoScreenState extends State<HistoricoScreen> {
-  get user => null;
   
-  get medicamentos => null;
 
   @override
   Widget build(BuildContext context) {
@@ -35,15 +33,6 @@ class _HistoricoScreenState extends State<HistoricoScreen> {
         ),
         
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Inicio'),
-          BottomNavigationBarItem(icon: Icon(Icons.medical_services), label: 'Remédios'),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_today), label: 'Agenda'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Eu'),
-        ],
-        selectedItemColor: const Color(0xFF5B8DEE),
-        unselectedItemColor: Colors.grey,
-        showUnselectedLabels: true,)
+     
       );
 }}
